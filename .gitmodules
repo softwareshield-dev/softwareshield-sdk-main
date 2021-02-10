@@ -4,3 +4,6 @@
 [submodule "sdk-csharp"]
 	path = sdk-csharp
 	url = http://echo:3000/Yummy/softwareshield-sdk-csharp.git
+[submodule "sdk-python"]
+	path = sdk-python
+	url = http://echo:3000/Yummy/softwareshield-sdk-python.git
