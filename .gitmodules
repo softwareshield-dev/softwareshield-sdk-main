@@ -7,3 +7,9 @@
 [submodule "sdk-python"]
 	path = sdk-python
 	url = http://echo:3000/Yummy/softwareshield-sdk-python.git
+[submodule "sdk-js"]
+	path = sdk-js
+	url = http://echo:3000/Yummy/softwareshield-sdk-js.git
+[submodule "sdk-delphi"]
+	path = sdk-delphi
+	url = http://echo:3000/Yummy/softwareshield-sdk-delphi.git
