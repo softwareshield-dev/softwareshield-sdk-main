@@ -1,15 +1,15 @@
 [submodule "sdk-c"]
 	path = sdk-c
-	url = http://echo:3000/Yummy/softwareshield-sdk-c.git
+	url = https://github.com/softwareshield-dev/softwareshield-sdk-c.git
 [submodule "sdk-csharp"]
 	path = sdk-csharp
-	url = http://echo:3000/Yummy/softwareshield-sdk-csharp.git
+	url = https://github.com/softwareshield-dev/softwareshield-sdk-csharp.git
 [submodule "sdk-python"]
 	path = sdk-python
-	url = http://echo:3000/Yummy/softwareshield-sdk-python.git
+	url = https://github.com/softwareshield-dev/softwareshield-sdk-python.git
 [submodule "sdk-js"]
 	path = sdk-js
-	url = http://echo:3000/Yummy/softwareshield-sdk-js.git
+	url = https://github.com/softwareshield-dev/softwareshield-sdk-js.git
 [submodule "sdk-delphi"]
 	path = sdk-delphi
-	url = http://echo:3000/Yummy/softwareshield-sdk-delphi.git
+	url = https://github.com/softwareshield-dev/softwareshield-sdk-delphi.git
