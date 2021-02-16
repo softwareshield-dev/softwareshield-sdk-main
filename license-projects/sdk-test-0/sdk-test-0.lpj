@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GameShield5 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Platform>Win32NT</Platform>
+  <IronWrapExpertApplicationType>Unknown</IronWrapExpertApplicationType>
+  <Product>
+    <ProductName>sdk-test-0</ProductName>
+    <ProductID>b5e5cfab-3783-4358-a575-3520d1ef0f7b</ProductID>
+    <ProductDescription>SDK test project #0</ProductDescription>
+    <Description>
+      <Item>
+        <Enabled>true</Enabled>
+        <LocaleName>en</LocaleName>
+        <EnglishName>English (United States)</EnglishName>
+      </Item>
+    </Description>
+    <UserInfo>
+      <CompanyName />
+      <Name />
+      <Address1 />
+      <Address2 />
+      <Address3 />
+      <Phone />
+      <EMail />
+    </UserInfo>
+    <TargetOS>Windows</TargetOS>
+    <BuildID>4</BuildID>
+  </Product>
+  <GUI>
+    <CopyJavascript>true</CopyJavascript>
+    <CopyLMApp>true</CopyLMApp>
+    <WrapUI>true</WrapUI>
+    <DebugUI>false</DebugUI>
+    <InAppPurchase>false</InAppPurchase>
+    <Width>800</Width>
+    <Height>600</Height>
+    <hasOnlineSettings>true</hasOnlineSettings>
+    <OnlineEnabled>false</OnlineEnabled>
+    <RemoteUrlBase />
+    <FallbackToLocalIfOffline>true</FallbackToLocalIfOffline>
+    <PageLoadTimeOut>20</PageLoadTimeOut>
+    <OnStartSuppressMode>SUPPRESS_ONSTART_ENTITY_UNLOCKED</OnStartSuppressMode>
+    <OnExitSuppressMode>SUPPRESS_ONEXIT_APP_UNLOCKED</OnExitSuppressMode>
+    <BuyNowURL />
+  </GUI>
+  <MainLicense>
+    <FileName>sdk-test-0.lic</FileName>
+    <FilePassword>egsne_3111&amp;IJGN&amp;dcsvo&amp;17332</FilePassword>
+    <FileAttributes>
+      <AccessibleToAll>true</AccessibleToAll>
+    </FileAttributes>
+    <Locked>false</Locked>
+    <vars />
+  </MainLicense>
+  <Storage>
+    <Scheme>File</Scheme>
+    <FileFromEnv>false</FileFromEnv>
+    <FileEnv>GS_FILEDB_DIR</FileEnv>
+  </Storage>
+  <Fingerprint>
+    <UseFingerprint>false</UseFingerprint>
+    <Tolerance>3</Tolerance>
+    <Options>
+      <Item>
+        <ID>1</ID>
+        <Name>Memory Chip Serial Number</Name>
+        <Description>Physical Memory</Description>
+        <Value>true</Value>
+      </Item>
+      <Item>
+        <ID>4</ID>
+        <Name>Hard Disk</Name>
+        <Description>Hard Disk Parameters</Description>
+        <Value>true</Value>
+      </Item>
+      <Item>
+        <ID>8</ID>
+        <Name>BIOS</Name>
+        <Description>BIOS Serial Number</Description>
+        <Value>true</Value>
+      </Item>
+      <Item>
+        <ID>16</ID>
+        <Name>CPU</Name>
+        <Description>CPU type</Description>
+        <Value>true</Value>
+      </Item>
+      <Item>
+        <ID>8192</ID>
+        <Name>System Model</Name>
+        <Description>Machine System Model</Description>
+        <Value>true</Value>
+      </Item>
+      <Item>
+        <ID>10000</ID>
+        <Name>Motherboard</Name>
+        <Description>Motherboard Serial Number</Description>
+        <Value>true</Value>
+      </Item>
+    </Options>
+  </Fingerprint>
+  <ActivationOptions>
+    <ActivationMethod>Online</ActivationMethod>
+    <UseDSABasedKeyGenAlgorithm>false</UseDSABasedKeyGenAlgorithm>
+    <ActivationKeyDSA>
+      <KeyLength>0</KeyLength>
+    </ActivationKeyDSA>
+  </ActivationOptions>
+  <CheckPoint />
+  <Entities>
+    <Entity>
+      <Name>E1</Name>
+      <Description>accessible in 2024 only</Description>
+      <ID>a98b6275-b494-4cd9-bff5-4526aa0efd12</ID>
+      <AutoStart>true</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.expire.hardDate.1" name="Expire By Hard Date" description="Protected entity can only be accessed during the preset date range">
+        <params>
+          <timeBeginEnabled description="Whether the begin date is valid. If set to false, the license is valid until the end date." type="bool" value="True" />
+          <timeEndEnabled description="Whether the end date is valid. If set to false, the license is valid forever from the start date." type="bool" value="True" />
+          <exitAppOnExpire description="Exit Application automatically when license is expired." type="bool" value="True" />
+          <rollbackTolerance description="The maximum allowed time rollback in seconds." type="integer" value="4000" />
+          <timeBegin type="datetime" isLocal="1" timeZone="canada" description="The beginning date the protected entity can be accessed." value="2024/01/01 08:00:00 AM" value_time_t="1704096000" />
+          <timeEnd type="datetime" isLocal="1" timeZone="canada" description="The ending date the protected entity can be accessed. The license expires after the end date." value="2025/01/01 08:00:00 AM" value_time_t="1735718400" />
+        </params>
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
+          <onTimeExpire id="205" description="UI is displayed when the trial time expires" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+    <Entity>
+      <Name>E2</Name>
+      <Description>expired after year 2000</Description>
+      <ID>c46c0500-e79f-4a0f-994b-ff8b56b441c2</ID>
+      <AutoStart>false</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.expire.hardDate.1" name="Expire By Hard Date" description="Protected entity can only be accessed during the preset date range">
+        <params>
+          <timeBeginEnabled description="Whether the begin date is valid. If set to false, the license is valid until the end date." type="bool" value="False" />
+          <timeEndEnabled description="Whether the end date is valid. If set to false, the license is valid forever from the start date." type="bool" value="True" />
+          <exitAppOnExpire description="Exit Application automatically when license is expired." type="bool" value="True" />
+          <rollbackTolerance description="The maximum allowed time rollback in seconds." type="integer" value="4000" />
+          <timeBegin type="datetime" isLocal="1" timeZone="canada" description="The beginning date the protected entity can be accessed." />
+          <timeEnd type="datetime" isLocal="0" timeZone="canada" description="The ending date the protected entity can be accessed. The license expires after the end date." value="2000/01/01 12:00:00 AM" value_time_t="946713600" />
+        </params>
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
+          <onTimeExpire id="205" description="UI is displayed when the trial time expires" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+  </Entities>
+  <IronWrap>
+    <LocalSource>true</LocalSource>
+    <GameSourceDirectory />
+    <SimpleApplicationInstance>true</SimpleApplicationInstance>
+    <TargetWinXP>true</TargetWinXP>
+    <QtEmbedding>InFirstPackage</QtEmbedding>
+    <Optimization>NotOptimized</Optimization>
+    <CommonDialogProtection>
+      <DisableFileOpenUI>false</DisableFileOpenUI>
+      <DisableSaveAsUI>false</DisableSaveAsUI>
+      <DisablePrintUI>false</DisablePrintUI>
+    </CommonDialogProtection>
+    <Debug>
+      <createCrashDump>false</createCrashDump>
+      <dumpFolder>%USERPROFILE%\gs5\crashdumps</dumpFolder>
+      <dumpType>Mini</dumpType>
+    </Debug>
+    <Packages />
+    <UseCodeRivets>false</UseCodeRivets>
+    <CodeRivets>
+      <Item>
+        <RivetID>Rivet_1</RivetID>
+        <BeginDelimiter>EB07D44D09FF5A0AB7</BeginDelimiter>
+        <EndDelimiter>EB07B70A5AFF094DD4</EndDelimiter>
+        <EncryptionKey>{8D2E4CAC-81B2-436B-BFC5-9B35623C6B4D}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_2</RivetID>
+        <BeginDelimiter>EB07C70C64676ABB8B</BeginDelimiter>
+        <EndDelimiter>EB078BBB6A67640CC7</EndDelimiter>
+        <EncryptionKey>{DBE641FF-12BB-46D2-BFEF-17D6FB010D94}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_3</RivetID>
+        <BeginDelimiter>EB07D0417185045E63</BeginDelimiter>
+        <EndDelimiter>EB07635E04857141D0</EndDelimiter>
+        <EncryptionKey>{8AEE30F3-F3C7-4871-A12C-0FA9F67AE276}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_4</RivetID>
+        <BeginDelimiter>EB07840E1B9AB49E75</BeginDelimiter>
+        <EndDelimiter>EB07759EB49A1B0E84</EndDelimiter>
+        <EncryptionKey>{37C770EC-FE98-4846-BCA4-6B5F761A1F6E}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_5</RivetID>
+        <BeginDelimiter>EB07B3A6C08A01B2BF</BeginDelimiter>
+        <EndDelimiter>EB07BFB2018AC0A6B3</EndDelimiter>
+        <EncryptionKey>{3D313996-2BC8-4F08-A1A2-FC7E2BFE3FD7}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_6</RivetID>
+        <BeginDelimiter>EB071A337B0FCBF942</BeginDelimiter>
+        <EndDelimiter>EB0742F9CB0F7B331A</EndDelimiter>
+        <EncryptionKey>{A370BD19-ECA1-4F23-893E-A6252B11FB91}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_7</RivetID>
+        <BeginDelimiter>EB070CB73569965341</BeginDelimiter>
+        <EndDelimiter>EB074153966935B70C</EndDelimiter>
+        <EncryptionKey>{55B86686-823B-4F2F-8225-D35EBBD1D876}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_8</RivetID>
+        <BeginDelimiter>EB072534AFDA96D3B9</BeginDelimiter>
+        <EndDelimiter>EB07B9D396DAAF3425</EndDelimiter>
+        <EncryptionKey>{67E0832C-9939-4597-B72A-1CC29A7BDD2E}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_9</RivetID>
+        <BeginDelimiter>EB071B892D1B72471E</BeginDelimiter>
+        <EndDelimiter>EB071E47721B2D891B</EndDelimiter>
+        <EncryptionKey>{D24844D6-352E-49CD-B6DC-D631384D01C4}</EncryptionKey>
+      </Item>
+      <Item>
+        <RivetID>Rivet_10</RivetID>
+        <BeginDelimiter>EB073BA89BBEE9F806</BeginDelimiter>
+        <EndDelimiter>EB0706F8E9BE9BA83B</EndDelimiter>
+        <EncryptionKey>{3C6D9673-4ACE-4A97-82EC-270C8062ABED}</EncryptionKey>
+      </Item>
+    </CodeRivets>
+    <ProtectedFiles />
+    <UseFileWrapping>true</UseFileWrapping>
+    <EmbeddedFiles />
+    <MachArchs>
+      <Item>Intel32</Item>
+    </MachArchs>
+    <Signing>
+      <UseValidationProtection>false</UseValidationProtection>
+      <UseCodeSigning>false</UseCodeSigning>
+      <EnableSandboxing>false</EnableSandboxing>
+      <CodesignAutomatically>false</CodesignAutomatically>
+    </Signing>
+  </IronWrap>
+  <Version>
+    <FileEdition>0</FileEdition>
+    <FileVersion>5.2.0.7</FileVersion>
+    <Creator>5.3.9.1</Creator>
+    <Modifier>5.3.9.1</Modifier>
+    <IronwrapperVersion>2.7.11.1</IronwrapperVersion>
+    <SDKVersion>5.3.9.1</SDKVersion>
+  </Version>
+  <ProjectType>LicenseOnly</ProjectType>
+  <SimpleDevUI>false</SimpleDevUI>
+  <SelfServiceEnabled>false</SelfServiceEnabled>
+  <TestedSuccessfully>false</TestedSuccessfully>
+  <IsPublishedToCheckpoint>false</IsPublishedToCheckpoint>
+  <ApplicationType>Unknown</ApplicationType>
+  <UseIronWrapExpert>false</UseIronWrapExpert>
+  <IronWrapExpertConfigurationID>Uninitialized</IronWrapExpertConfigurationID>
+</GameShield5>
