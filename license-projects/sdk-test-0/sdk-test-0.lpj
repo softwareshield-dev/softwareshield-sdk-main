@@ -23,7 +23,7 @@
       <EMail />
     </UserInfo>
     <TargetOS>Windows</TargetOS>
-    <BuildID>4</BuildID>
+    <BuildID>5</BuildID>
   </Product>
   <GUI>
     <CopyJavascript>true</CopyJavascript>
@@ -108,7 +108,7 @@
   <CheckPoint />
   <Entities>
     <Entity>
-      <Name>E1</Name>
+      <Name>E1-valid-range</Name>
       <Description>accessible in 2024 only</Description>
       <ID>a98b6275-b494-4cd9-bff5-4526aa0efd12</ID>
       <AutoStart>true</AutoStart>
@@ -134,7 +134,7 @@
       </LicenseModel>
     </Entity>
     <Entity>
-      <Name>E2</Name>
+      <Name>E2-expire-after</Name>
       <Description>expired after year 2000</Description>
       <ID>c46c0500-e79f-4a0f-994b-ff8b56b441c2</ID>
       <AutoStart>false</AutoStart>
@@ -147,12 +147,161 @@
           <exitAppOnExpire description="Exit Application automatically when license is expired." type="bool" value="True" />
           <rollbackTolerance description="The maximum allowed time rollback in seconds." type="integer" value="4000" />
           <timeBegin type="datetime" isLocal="1" timeZone="canada" description="The beginning date the protected entity can be accessed." />
-          <timeEnd type="datetime" isLocal="0" timeZone="canada" description="The ending date the protected entity can be accessed. The license expires after the end date." value="2000/01/01 12:00:00 AM" value_time_t="946713600" />
+          <timeEnd type="datetime" isLocal="0" timeZone="canada" description="The ending date the protected entity can be accessed. The license expires after the end date." value="2000/01/01 08:00:00 AM" value_time_t="946713600" />
         </params>
         <events>
           <onStart id="201" description="UI displayed on startup" url="" />
           <onExit id="2" description="UI displayed on exit" url="" />
           <onTimeExpire id="205" description="UI is displayed when the trial time expires" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+    <Entity>
+      <Name>E3-valid-since</Name>
+      <Description>valid since 2021</Description>
+      <ID>8b8c1bb6-632c-46fb-a974-3009130b6028</ID>
+      <AutoStart>false</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.expire.hardDate.1" name="Expire By Hard Date" description="Protected entity can only be accessed during the preset date range">
+        <params>
+          <timeBeginEnabled description="Whether the begin date is valid. If set to false, the license is valid until the end date." type="bool" value="True" />
+          <timeEndEnabled description="Whether the end date is valid. If set to false, the license is valid forever from the start date." type="bool" value="False" />
+          <exitAppOnExpire description="Exit Application automatically when license is expired." type="bool" value="True" />
+          <rollbackTolerance description="The maximum allowed time rollback in seconds." type="integer" value="4000" />
+          <timeBegin type="datetime" isLocal="1" timeZone="canada" description="The beginning date the protected entity can be accessed." value="2021/01/01 12:00:00 AM" value_time_t="1609488000" />
+          <timeEnd type="datetime" isLocal="1" timeZone="canada" description="The ending date the protected entity can be accessed. The license expires after the end date." />
+        </params>
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
+          <onTimeExpire id="205" description="UI is displayed when the trial time expires" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+    <Entity>
+      <Name>E4-period</Name>
+      <Description>30-days</Description>
+      <ID>9f71d5f4-09dc-4667-b57f-dd066dad8f8a</ID>
+      <AutoStart>false</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.expire.period.1" name="Expire By Period" description="Protected entity can only be accessed during the preset date range">
+        <params>
+          <exitAppOnExpire description="Exit Application automatically when license is expired." type="bool" value="True" />
+          <periodInSeconds description="The maximum time period the protected entity can be accessed." type="integer" value="2592000" />
+        </params>
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
+          <onTimeExpire id="205" description="UI is displayed when the trial time expires" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+    <Entity>
+      <Name>E5-duration</Name>
+      <Description />
+      <ID>ac923c39-e303-4939-9e85-dd43496c691d</ID>
+      <AutoStart>false</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.expire.duration.1" name="Expire By Duration" description="Protected entity expires after it has been accessed more than a preset time period.">
+        <params>
+          <exitAppOnExpire description="Exit Application automatically when license is expired." type="bool" value="True" />
+          <maxDurationInSeconds description="The maximum cumulative time duration the protected entity can be accessed." type="integer" value="1296000" />
+        </params>
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
+          <onTimeExpire id="205" description="UI is displayed when the trial time expires" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+    <Entity>
+      <Name>E6-session</Name>
+      <Description>session-1-min</Description>
+      <ID>d220f4f4-3ff9-4582-900f-c3c571c50081</ID>
+      <AutoStart>false</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.expire.sessionTime.1" name="Expire By Session Time" description="Protected entity expires after it has been accessed cumulatively more than a preset time duration.">
+        <params>
+          <exitAppOnExpire description="Exit Application automatically when license is expired." type="bool" value="True" />
+          <maxSessionTime description="The maximum session time the protected entity can be accessed." type="integer" value="60" />
+        </params>
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
+          <onTimeExpire id="205" description="UI is displayed when the trial time expires" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+    <Entity>
+      <Name>E7-access</Name>
+      <Description>access-8</Description>
+      <ID>5a15d673-d865-44b2-a8c6-8f3526021fc7</ID>
+      <AutoStart>false</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.expire.accessTime.1" name="Expire By Access Times" description="The protected entity always can be accessed but it automatically expires after a preset time for each session">
+        <params>
+          <exitAppOnExpire description="Exit Application automatically when license is expired." type="bool" value="True" />
+          <maxAccessTimes description="The maximum access time protected entity can be accessed." type="integer" value="8" />
+        </params>
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+    <Entity>
+      <Name>E8-always-run</Name>
+      <Description>always run</Description>
+      <ID>a24bd16d-5b04-4fd5-8662-9aa600e46c1c</ID>
+      <AutoStart>false</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.alwaysRun.1" name="Always Run" description="The protected entity cannot be accessed after it has been accessed more than a preset times">
+        <params />
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
+          <onAppRollback id="3" description="On Clock Rollback" url="" />
+          <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
+          <onLicenseFail id="103" description="License access has failed" url="" />
+        </events>
+      </LicenseModel>
+    </Entity>
+    <Entity>
+      <Name>E9-locked</Name>
+      <Description>locked</Description>
+      <ID>e6e7d4d7-4932-47e7-8075-3f2c90e421fc</ID>
+      <AutoStart>false</AutoStart>
+      <Image />
+      <UseLicenseModel>true</UseLicenseModel>
+      <LicenseModel id="gs.lm.alwaysLock.1" name="Always Locked" description="Protected entity can always be accessed. This license model can help to display some UI feedbacks (splash screen/help screen,etc.) when the entity is being accessed.">
+        <params />
+        <events>
+          <onStart id="201" description="UI displayed on startup" url="" />
+          <onExit id="2" description="UI displayed on exit" url="" />
           <onAppRollback id="3" description="On Clock Rollback" url="" />
           <onAppIntegrityCorrupt id="4" description="Files within the package are corrupt." url="" />
           <onLicenseFail id="103" description="License access has failed" url="" />
